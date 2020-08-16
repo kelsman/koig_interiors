@@ -1,0 +1,62 @@
+.signup-container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  align-items: center;
+  margin: 0 auto;
+  background-image: url("../../assets/blank\ copy.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  .wrapper {
+    width: 400px;
+    height: 500px;
+    border: 1px solid #fff;
+    -webkit-box-shadow: 3px 3px 5px 4px #ccc; /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    -moz-box-shadow: 3px 3px 5px 4px #ccc; /* Firefox 3.5 - 3.6 */
+    box-shadow: 3px 3px 5px 4px #ccc;
+    padding: 10px;
+    border-radius: 10px;
+
+    h2 {
+      text-align: center;
+      text-shadow: currentColor;
+    }
+    .signup-form {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      input {
+        display: block;
+        border: 0;
+        border-bottom: 1px solid grey;
+        margin: 15px 20px;
+        height: 50px;
+        padding: 10px;
+
+        &:focus {
+          outline: 0;
+          box-shadow: 3px 3px 5px 3px #ccc;
+          border-radius: 5px;
+        }
+      }
+      .signup-btn {
+        width: 200px;
+        padding: 10px;
+        display: block;
+        margin: 5px auto;
+        border-radius: 10px;
+        border: 0;
+        cursor: pointer;
+        color: #fff;
+        background-image: linear-gradient(to right, orange, rgb(131, 62, 131));
+        &:focus {
+          outline: 0;
+          transform: scale(1.02);
+          transition: all 0.3s ease-in-out;
+        }
+      }
+    }
+  }
+}

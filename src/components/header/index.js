@@ -2,9 +2,13 @@ import React from 'react'
 import './style.scss';
 import CartIcon from '../carticon/index';
 import { Link } from 'react-router-dom';
+import AccountDropdown from '../account-dropdwon';
+//redux
+import { connect } from 'react-redux';
+import { toggle } from '../../Redux/user/userActions';
 
 
-const Header = () => {
+const Header = ({ toggle, hidden }) => {
     return (
         <div className="header">
 
@@ -26,16 +30,16 @@ const Header = () => {
             </div>
 
             <div className="users">
-                <span>
+                <span style={{ cursor: "pointer" }} onClick={() => toggle()}>
                     <i className="fi-xtluxl-user-thin"></i>
-                 LOGIN/SIGNUP
+                    account
                 </span>
 
                 <CartIcon />
 
             </div>
 
-
+            {hidden ? null : <AccountDropdown />}
 
 
 
@@ -43,4 +47,11 @@ const Header = () => {
     )
 }
 
-export default Header;
+const mapDispatchToProps = {
+    toggle
+};
+const mapStateToProps = ({ user }) => ({
+    hidden: user.hidden
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(Header);

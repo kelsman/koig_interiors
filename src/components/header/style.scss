@@ -1,13 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap");
 .header {
   width: 100%;
-  background: #b2ebf2;
+  background: transparent;
   margin: 0;
   padding: 0;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   position: relative;
+  z-index: 10px;
   .logo > h1 {
     font-family: "Tangerine", cursive;
     font-size: 40px;
