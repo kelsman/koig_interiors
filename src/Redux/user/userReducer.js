@@ -10,6 +10,7 @@ const userReducer = (state = initState, action) => {
         case userActionTypes.CURRENT_USER:
             return {
                 ...state,
+                currentUser: action.payload
 
             }
         case userActionTypes.TOGGLE_DROPDOWN:

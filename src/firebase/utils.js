@@ -12,3 +12,51 @@ const config = {
     appId: process.REACT_APP_APP_ID
 };
 firebase.initializeApp(config);
+
+
+export const auth = firebase.auth();
+export const firestore = firebase.firestore();
+
+const provider = new firebase.auth.GoogleAuthProvider();
+
+provider.setCustomParameters({ prompt: 'select_account' });
+
+export const signInWithGoogle = async () => {
+    try {
+        await auth.signInWithPopup(provider);
+        alert('signed in succesfully');
+    } catch (error) {
+        alert(error.message)
+    }
+}
+
+export const createUserProfile = (userAuth, additionData) => {
+    if (!userAuth) return;
+
+    const userRef = firestore.doc(`users/${userAuth.uid}`);
+    const snapShot = userRef.get();
+
+    if (!snapShot.exists) {
+        const { email, displayName } = userAuth;
+        const createdAt = new Date();
+
+        try {
+
+            userRef.set({
+                email,
+                displayName,
+                createdAt,
+                username: additionData
+            });
+        } catch (error) {
+            console.log(error)
+        }
+
+    }
+
+    return userRef;
+
+}
+
+
+export default firebase;

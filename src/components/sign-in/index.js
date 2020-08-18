@@ -3,6 +3,7 @@ import './style.scss';
 import { Link } from 'react-router-dom';
 import png from '../../assets/Mobile-login-pana.png'
 import google from '../../assets/hero/g.png';
+import { auth, signInWithGoogle } from '../../firebase/utils';
 
 class LogIn extends React.Component {
 
@@ -14,8 +15,16 @@ class LogIn extends React.Component {
         const { name, value } = event.target;
         this.setState({ [name]: value });
     }
-    handleSubmit = (event) => {
+    handleSubmit = async (event) => {
         event.preventDefault();
+        const { email, password } = this.state;
+
+        try {
+            await auth.signInWithEmailAndPassword(email, password);
+        } catch (error) {
+            alert(error.message);
+        }
+
     }
     render() {
         return (
@@ -44,7 +53,11 @@ class LogIn extends React.Component {
                             <Link className="password-reset" to='/'> Forget Password?</Link>
                         </small>
                         <button className="signin-btn"> SIGN IN</button>
-                        <button className="google">
+                        <button
+                            type="button"
+                            className="google"
+                            onClick={signInWithGoogle}
+                        >
                             <img src={google} alt="" />
                             sign in with Google
                          </button>

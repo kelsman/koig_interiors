@@ -1,48 +1,70 @@
-import React from "react";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel } from 'react-responsive-carousel';
+import React, { useState } from "react";
+import './style.scss'
+import Carousel from 'react-bootstrap/Carousel'
+import "bootstrap/dist/css/bootstrap.css";
+import "react-bootstrap-carousel/dist/react-bootstrap-carousel.css";
+
+
 
 const CarouselPage = () => {
+
+    const [index, setIndex] = useState(0);
+
+    const handleSelect = (selectedIndex, e) => {
+        setIndex(selectedIndex);
+    };
     return (
 
-
-
-        <div className="slide-wrapper">
+        <div className=" wrapper ">
 
             <Carousel
-                autoPlay interval="5000"
-                showArrows="fasle"
-                infiniteLoop="true"
-                showStatus="false"
-                showThumbs="false"
-                swipeable
-                autoplay="true" >
-                <div>
+                className="container-fluid "
+                activeIndex={index}
+                onSelect={handleSelect}
+            >
+                <Carousel.Item className="slider">
 
                     <img
-                        className="img"
-                        src="https://i.ibb.co/0Q3m8j4/image3.jpg"
+                        className="d-block w-100"
+                        src="https://cdn.shopify.com/s/files/1/0192/1043/6708/files/2_ffd03955-46dc-48a7-abf8-6f5b4a94e32a_1088x576_crop_center.png?v=1587224668"
                         alt="First slide"
+                        style={{ 'height': "500px", }}
                     />
 
-                </div>
-                <div>
+                </Carousel.Item>
+                <Carousel.Item className="slider" >
 
                     <img
-                        className="img"
-                        src="https://i.ibb.co/jhLqLB6/image7.jpg"
-                        alt="Second slide" />
+                        className="d-block w-100"
+                        src="https://cdn.shopify.com/s/files/1/0192/1043/6708/files/1_1088x576_crop_center.png?v=1587207697"
+                        alt="Second slide"
+                        style={{ 'height': "500px" }}
+                    />
 
-                </div>
-                <div>
+
+                </Carousel.Item>
+                <Carousel.Item className="slider">
 
                     <img
-                        className="img"
+                        className="d-block w-100"
                         src="https://i.ibb.co/BTq4tjR/image5.jpg"
                         alt="Third slide"
+
                     />
 
-                </div>
+                </Carousel.Item>
+                <Carousel.Item className="slider">
+
+                    <img
+                        className="d-block w-100"
+                        src="https://cdn.shopify.com/s/files/1/0192/1043/6708/files/7_1088x576_crop_center.png?v=1587217678"
+                        alt="Third slide"
+
+                    />
+
+
+                </Carousel.Item>
+
 
 
 

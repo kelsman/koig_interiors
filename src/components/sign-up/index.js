@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './style.scss';
 import { Link } from "react-router-dom";
 import png from "../../assets/Mobile-login-pana.png";
+import { auth, createUserProfile } from '../../firebase/utils';
 
 class SignUp extends Component {
     state = {
@@ -9,13 +10,36 @@ class SignUp extends Component {
         email: "",
         password: "",
         confirmPassword: "",
+        errorAlert: ''
     };
     handleChange = (event) => {
         const { name, value } = event.target;
         this.setState({ [name]: value });
     };
-    handleSubmit = (event) => {
+    handleSubmit = async (event) => {
         event.preventDefault();
+        const { email, password, confirmPassword, username } = this.state;
+        if (password !== confirmPassword) {
+            this.setState({ errorAlert: "password do not match" });
+
+        } else {
+            this.setState({ errorAlert: '' })
+            try {
+                const user = await auth.createUserWithEmailAndPassword(email, password);
+                await createUserProfile(user, { username });
+
+
+            } catch (error) {
+                alert(error.message);
+            }
+        }
+        this.setState({
+            username: "",
+            email: "",
+            password: "",
+            confirmPassword: ""
+
+        })
     };
     render() {
         return (
@@ -52,12 +76,17 @@ class SignUp extends Component {
                             value={this.state.confirmPassword}
                             onChange={this.handleChange}
                         />
+                        <small style={{
+                            color: "red",
+                            display: "block",
+                            float: "right"
+                        }}>{this.state.errorAlert}</small>
 
                         <button className="signup-btn"> SIGN UP</button>
                         <p>
                             {" "}
               Already have an account?
-              <Link to="/sigin" style={{ color: "orange" }}>
+              <Link to="/login" style={{ color: "orange" }}>
                                 {" "}
                 sign in{" "}
                             </Link>

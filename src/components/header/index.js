@@ -1,57 +1,77 @@
-import React from 'react'
+import React, { Component } from 'react'
 import './style.scss';
 import CartIcon from '../carticon/index';
 import { Link } from 'react-router-dom';
-import AccountDropdown from '../account-dropdwon';
+
+import { auth } from '../../firebase/utils';
 //redux
 import { connect } from 'react-redux';
-import { toggle } from '../../Redux/user/userActions';
+import SlideMenu from '../slide-menu';
+import Burger from '../burger-menu/index';
 
 
-const Header = ({ toggle, hidden }) => {
-    return (
-        <div className="header">
 
-            <div className="logo">
 
-                <h1> koig_interiors</h1>
+
+class Header extends Component {
+
+
+    render() {
+
+        const { currentUser } = this.props;
+
+
+
+        return (
+            <div className="header">
+
+
+                <header>
+                    <div className="brand">
+
+                        <Burger />
+
+                        <Link to="/"> ken_interiors</Link>
+                    </div>
+
+
+                    <nav>
+                        <ul>
+
+                            <li className='nav-item'> <Link to='/'>shop</Link></li>
+                            <li className='nav-item'> <Link to='/'>About</Link></li>
+                            <li className='nav-item'> <Link to='/'>Contact</Link></li>
+
+
+                            {currentUser ? (
+                                <li className='nav-item'>
+                                    <button onClick={() => auth.signOut()} className='signOut-btn'>
+                                        Sign Out
+                                         </button>
+                                </li>
+                            ) : (
+                                    <li className='nav-item'>
+                                        <Link to='signin'>Sign In</Link>
+                                    </li>
+                                )}
+                            <li>   <CartIcon /></li>
+                        </ul>
+                    </nav>
+
+
+
+                </header>
+
+                <SlideMenu />
             </div>
-
-            <div className="navLinks">
-
-                <ul>
-
-                    <Link to='/'> Home</Link>
-                    <Link to='/'>shop</Link>
-                    <Link to='/'>About</Link>
-                    <Link to='/'>Contact</Link>
-
-                </ul>
-            </div>
-
-            <div className="users">
-                <span style={{ cursor: "pointer" }} onClick={() => toggle()}>
-                    <i className="fi-xtluxl-user-thin"></i>
-                    account
-                </span>
-
-                <CartIcon />
-
-            </div>
-
-            {hidden ? null : <AccountDropdown />}
-
-
-
-        </div>
-    )
+        )
+    }
 }
 
-const mapDispatchToProps = {
-    toggle
-};
+
 const mapStateToProps = ({ user }) => ({
-    hidden: user.hidden
+
+    currentUser: user.currentUser
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(Header);
+export default connect(mapStateToProps, null)(Header);

@@ -1,0 +1,36 @@
+.slide-menu {
+  top: 0;
+  z-index: 50;
+  width: 300px;
+  background: #fff;
+  transition: all 0.4s ease-in-out;
+  height: auto;
+  position: fixed;
+
+  .close-btn {
+    text-align: right;
+    margin: 10px;
+    cursor: pointer;
+  }
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      display: block;
+      margin: 10px 10px;
+      a {
+        color: black;
+        &:hover {
+          color: blue;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 400px) {
+  .slide-menu {
+    width: 90%;
+  }
+}

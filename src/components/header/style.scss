@@ -1,43 +1,91 @@
 @import url("https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap");
 .header {
-  width: 100%;
-  background: transparent;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
   position: relative;
-  z-index: 10px;
-  .logo > h1 {
-    font-family: "Tangerine", cursive;
-    font-size: 40px;
-    cursor: pointer;
-  }
-  .navLinks {
+  header {
     display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    width: 100%;
+    background: transparent;
+
+    a {
+      color: #111;
+      text-decoration: none;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      a {
+        display: block;
+        cursor: pointer;
+        font-family: "Tangerine", cursive;
+        font-size: 32px;
+        margin: 0 3px;
+      }
+    }
+
     ul {
       list-style-type: none;
       margin: 0;
+      padding: 0;
       display: flex;
-      a {
-        display: block;
+      align-items: center;
+      white-space: nowrap;
+
+      justify-content: space-around;
+      .nav-item {
         margin: 0 10px;
-        text-decoration: none;
-        text-transform: capitalize;
-        color: #111;
       }
     }
   }
-  .users {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+}
 
-    width: 150px;
-    span {
-      &:hover {
-        color: #e97171;
+@media screen and (max-width: 320px) {
+  body {
+    width: 320px;
+  }
+  header {
+    width: 100%;
+    .brand {
+      justify-content: space-between;
+      width: 50%;
+
+      a {
+        display: block;
+        cursor: pointer;
+        font-family: "Tangerine", cursive;
+        font-size: 32px;
+      }
+    }
+    ul {
+      .nav-item {
+        display: none;
+      }
+    }
+  }
+}
+@media screen and (max-width: 375px) {
+  body {
+    width: 375px;
+    .header {
+      width: 100%;
+      .brand {
+        justify-content: space-between;
+        width: 50%;
+
+        a {
+          display: block;
+          cursor: pointer;
+          font-family: "Tangerine", cursive;
+          font-size: 32px;
+        }
+      }
+      ul {
+        .nav-item {
+          display: none;
+        }
       }
     }
   }
