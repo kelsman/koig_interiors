@@ -44,9 +44,33 @@
 
 @media screen and (max-width: 320px) {
   body {
-    width: 320px;
+    width: inherit;
   }
   header {
+    width: 320px;
+    .brand {
+      justify-content: space-between;
+      width: 50%;
+
+      a {
+        display: block;
+        cursor: pointer;
+        font-family: "Tangerine", cursive;
+        font-size: 32px;
+      }
+    }
+    ul {
+      .nav-item {
+        display: none;
+      }
+    }
+  }
+}
+@media screen and (max-width: 425px) {
+  body {
+    width: inherit;
+  }
+  .header {
     width: 100%;
     .brand {
       justify-content: space-between;
@@ -66,27 +90,13 @@
     }
   }
 }
-@media screen and (max-width: 375px) {
+@media screen and (min-width: 1440px) {
   body {
-    width: 375px;
-    .header {
-      width: 100%;
-      .brand {
-        justify-content: space-between;
-        width: 50%;
-
-        a {
-          display: block;
-          cursor: pointer;
-          font-family: "Tangerine", cursive;
-          font-size: 32px;
-        }
-      }
-      ul {
-        .nav-item {
-          display: none;
-        }
-      }
-    }
+    width: inherit;
+  }
+}
+@media screen and (min-width: 500px) {
+  body {
+    width: inherit;
   }
 }

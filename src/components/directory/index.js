@@ -32,14 +32,14 @@ class Directory extends Component {
 
                         <div className="outdoor" onClick={() => history.push('/outdoor')}>
 
-                            <img src="https://secure.img1-fg.wfcdn.com/im/34444128/resize-h310-w310%5Ecompr-r85/1203/120349286/Brittney+9+Piece+Dining+Set.jpg" alt="" />
+                            <img src="https://secure.img1-fg.wfcdn.com/im/92522723/resize-h260-w260%5Ecompr-r85%5Etransparent/1069/106935815/default_name.png" alt="" />
 
                             <h4> outdoor </h4>
 
                         </div>
                         <div className="rugs" onClick={() => history.push('/rugs')}>
 
-                            <img src="https://secure.img1-fg.wfcdn.com/im/39999773/c_crop_resize_zoom-h463-w1176%5Ecompr-r85/9578/95781788/default_name.jpg" alt="" />
+                            <img src="https://secure.img1-fg.wfcdn.com/im/15436927/resize-h310-w310%5Ecompr-r85/1179/117948350/Handmade+Flatweave+Jute/Sisal+Tan+Area+Rug.jpg" alt="" />
 
                             <h4> rugs</h4>
 

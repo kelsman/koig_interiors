@@ -51,7 +51,7 @@ class Header extends Component {
                                 </li>
                             ) : (
                                     <li className='nav-item'>
-                                        <Link to='signin'>Sign In</Link>
+                                        <Link to='login'>Sign In</Link>
                                     </li>
                                 )}
                             <li>   <CartIcon /></li>

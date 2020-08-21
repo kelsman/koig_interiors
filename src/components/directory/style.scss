@@ -79,9 +79,9 @@
 
     .lists {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      grid-template-columns: repeat(2, 1fr);
 
-      padding: 0 40px;
+      padding: 0 20px;
       .furniture,
       .accent-chairs,
       .outdoor,
@@ -113,7 +113,7 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
 
-      padding: 0 15px;
+      padding: 0 40px;
       .furniture,
       .accent-chairs,
       .outdoor,
@@ -145,14 +145,14 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
 
-      padding: 0 20px;
+      padding: 0 40px;
       .furniture,
       .accent-chairs,
       .outdoor,
       .rugs,
       .lightening,
       .office {
-        width: 120px;
+        width: 130px;
         height: 300px;
 
         img {
@@ -178,7 +178,7 @@
       grid-gap: 5px;
       grid-template-columns: repeat(3, 1fr);
 
-      padding: 0 15px;
+      padding: 0 50px;
       .furniture,
       .accent-chairs,
       .outdoor,

@@ -19,9 +19,12 @@
     "react-scripts": "^3.4.3",
     "react-slick": "^0.27.9",
     "redux": "^4.0.5",
+    "redux-localstorage-simple": "^2.3.1",
     "redux-logger": "^3.0.6",
+    "redux-persist": "^6.0.0",
     "sass": "^1.26.10",
-    "styled-components": "^5.1.1"
+    "styled-components": "^5.1.1",
+    "uuid": "^8.3.0"
   },
   "scripts": {
     "start": "react-scripts start",

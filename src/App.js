@@ -10,6 +10,9 @@ import { auth, createUserProfile } from './firebase/utils';
 //redux
 import { connect } from 'react-redux';
 import { setCurrentUser } from './Redux/user/userActions';
+import Chairs from './pages/chairs';
+import CartCheckoutPage from './pages/cart-checkout';
+import FurniturePage from './pages/furniture-page';
 
 class App extends Component {
 
@@ -37,10 +40,13 @@ class App extends Component {
 
 
     });
+
+
   }
   componentWillUnmount = () => {
     this.authListerner()
   }
+
 
   render() {
     const { currentUser } = this.props;
@@ -59,8 +65,9 @@ class App extends Component {
             currentUser ? <Redirect to='/' /> : <SignUpPage />
           } />
 
-
-
+          <Route exact path="/accent-chairs" render={() => <Chairs />} />
+          <Route exact path='/furniture' render={() => <FurniturePage />} />
+          <Route exact path="/checkout-page" render={() => < CartCheckoutPage />} />
         </Switch>
 
       </div>
@@ -68,8 +75,9 @@ class App extends Component {
 
   }
 }
-const mapStateToProps = ({ user }) => ({
-  currentUser: user.currentUser
+const mapStateToProps = ({ user, cart }) => ({
+  currentUser: user.currentUser,
+  cartItems: cart.cartItems
 });
 const mapDispatchToProps = {
   setCurrentUser

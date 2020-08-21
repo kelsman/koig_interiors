@@ -3,7 +3,7 @@ import { burgerActionTypes } from './burgerActionTypes';
 
 const initialState = {
     styles: {
-
+        transform: "translateX(-100%)"
 
     }
 
