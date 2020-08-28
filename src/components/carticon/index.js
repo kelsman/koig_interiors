@@ -10,6 +10,7 @@ const CartIcon = ({ history, itemCount }) => {
             <div className="cart-icon" onClick={() => history.push('/checkout-page')}>
 
                 <ShoppingBag className='shopping-icon' />
+
                 <span className='item-count'> {itemCount} </span>
 
             </div>
@@ -22,6 +23,7 @@ const CartIcon = ({ history, itemCount }) => {
 
 const mapStateToProps = ({ cart }) => ({
     itemCount: cart.itemCount
+
 });
 
 export default connect(mapStateToProps, null)(withRouter(CartIcon));

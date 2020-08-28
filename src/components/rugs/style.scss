@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&family=Tangerine:wght@700&display=swap');
 
-.furniture {
+.rug {
   width: 100%;
   position: relative;
   transition: all 0.4s ease-out;
@@ -43,7 +43,7 @@
     grid-gap: 10px;
     padding: 20px 20px;
 
-    .furniture-parent {
+    .rug-parent {
       overflow: hidden;
       margin: 8px 0;
       position: relative;
@@ -87,6 +87,10 @@
         padding: 0 5px;
         font-size: 20px;
         border-radius: 10px;
+        &:focus {
+          outline: none;
+          background: #111;
+        }
       }
     }
   }
@@ -96,12 +100,12 @@
   body {
     width: inherit;
   }
-  .furniture {
+  .rug {
     .list-wrapper {
       grid-template-columns: repeat(2, minmax(160px, 1fr));
       grid-gap: unset;
       padding: 20px 10px;
-      .furniture-parent {
+      .rug-parent {
         width: 140px;
         height: 400px;
         margin: 8px 0;
@@ -127,12 +131,12 @@
   body {
     width: inherit;
   }
-  .furniture {
+  .rug {
     .list-wrapper {
       grid-template-columns: repeat(2, minmax(160px, 1fr));
       grid-gap: 10px;
       padding: 20px 30px;
-      .furniture-parent {
+      .rug-parent {
         width: 140px;
         height: 400px;
         margin: 8px 0;
@@ -158,13 +162,13 @@
   body {
     width: inherit;
   }
-  .furniture {
+  .rug {
     .list-wrapper {
       grid-template-columns: repeat(2, minmax(160px, 1fr));
       grid-gap: 20px;
 
       padding: 20px 30px;
-      .furniture-parent {
+      .rug-parent {
         width: 180px;
         height: 400px;
         margin: 8px 0;
@@ -186,13 +190,13 @@
   body {
     width: inherit;
   }
-  .furniture {
+  .rug {
     .list-wrapper {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       grid-gap: 10px;
-      padding: 20px 40px;
-      .furniture-parent {
+      padding: 20px 60px;
+      .rug-parent {
         width: 300px;
         height: 400px;
         margin: 8px 0;
@@ -205,6 +209,14 @@
           text-transform: capitalize;
           margin: 5px;
           font-size: 16px;
+        }
+        .image {
+          object-fit: fill;
+          object-position: center;
+          width: 100%;
+          margin: 0;
+          height: 60%;
+          background: transparent;
         }
       }
     }

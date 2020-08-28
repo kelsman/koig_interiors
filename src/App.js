@@ -1,18 +1,23 @@
 import React, { Component } from 'react';
 import Homepage from './pages/homepage';
 import Header from './components/header'
+import Footer from './components/footer/index';
 import { Route, Switch, Redirect } from 'react-router-dom';
 //pages
 import LogInPage from './pages/login-page';
 import SignUpPage from './pages/signup-page';
+import CartCheckoutPage from './pages/cart-checkout';
+import FurniturePage from './pages/furniture-page';
+import OutdoorPage from './pages/outdoor-page';
+import RugPage from './pages/rug-page';
+import LighteningPage from './pages/lightening-page';
+import PaymentPage from './pages/payment-page'
 //firebase
 import { auth, createUserProfile } from './firebase/utils';
 //redux
 import { connect } from 'react-redux';
 import { setCurrentUser } from './Redux/user/userActions';
 import Chairs from './pages/chairs';
-import CartCheckoutPage from './pages/cart-checkout';
-import FurniturePage from './pages/furniture-page';
 
 class App extends Component {
 
@@ -52,25 +57,34 @@ class App extends Component {
     const { currentUser } = this.props;
     return (
       <div className="App">
-        <Header />
-        <Switch>
-          <Route exact path='/' component={Homepage} />
+        <div className="content">
+          <div className="content-inside">
+            <Header />
 
-          <Route exact
-            path='/login'
-            render={() =>
-              currentUser ? <Redirect to='/' /> : <LogInPage />
-            } />
-          <Route path='/signup' render={() =>
-            currentUser ? <Redirect to='/' /> : <SignUpPage />
-          } />
+            <Switch>
+              <Route exact path='/' component={Homepage} />
+              <Route exact
+                path='/login'
+                render={() =>
+                  currentUser ? <Redirect to='/' /> : <LogInPage />
+                } />
+              <Route path='/signup' render={() =>
+                currentUser ? <Redirect to='/' /> : <SignUpPage />
+              } />
 
-          <Route exact path="/accent-chairs" render={() => <Chairs />} />
-          <Route exact path='/furniture' render={() => <FurniturePage />} />
-          <Route exact path="/checkout-page" render={() => < CartCheckoutPage />} />
-        </Switch>
-
+              <Route exact path="/accent-chairs" render={() => <Chairs />} />
+              <Route exact path='/furniture' render={() => <FurniturePage />} />
+              <Route exact path="/checkout-page" render={() => < CartCheckoutPage />} />
+              <Route exact path='/outdoor' render={() => <OutdoorPage />} />
+              <Route exact path='/rugs' component={RugPage} />
+              <Route exact path='/lightening' component={LighteningPage} />
+              <Route exact path='/payment' component={PaymentPage} />
+            </Switch>
+          </div>
+        </div>
+        <Footer />
       </div>
+
     );
 
   }
@@ -83,3 +97,6 @@ const mapDispatchToProps = {
   setCurrentUser
 };
 export default connect(mapStateToProps, mapDispatchToProps)(App);
+
+
+

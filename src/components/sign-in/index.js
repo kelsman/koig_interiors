@@ -40,6 +40,7 @@ class LogIn extends React.Component {
                             placeholder="Email"
                             value={this.state.email}
                             onChange={this.handleChange}
+                            required
 
                         />
                         <input type="password"
@@ -47,6 +48,7 @@ class LogIn extends React.Component {
                             placeholder="password"
                             value={this.state.password}
                             onChange={this.handleChange}
+                            required
                         />
                         <small>
 
@@ -70,7 +72,7 @@ class LogIn extends React.Component {
 
 
                 </div>
-                <div className="signup-msg">
+                <div className="sign-png">
                     <img src={png} alt="" />
                 </div>
 

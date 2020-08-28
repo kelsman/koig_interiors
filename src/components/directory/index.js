@@ -46,18 +46,18 @@ class Directory extends Component {
                         </div>
                         <div className="lightening" onClick={() => history.push('/lightening')}>
 
-                            <img src="https://secure.img1-ag.wfcdn.com/im/53558235/resize-h110-w110%5Ecompr-r85%5Etransparent/9054/90544279/default_name.png" alt="" />
+                            <img src="https://secure.img1-fg.wfcdn.com/im/09145006/resize-h348-w348%5Ecompr-r85%5Etransparent/1217/121759404/default_name.png" alt="" />
 
                             <h4> lightening</h4>
 
                         </div>
-                        <div className="office" onClick={() => history.push('/home-office')}>
+                        { /*<div className="office" onClick={() => history.push('/home-office')}>
 
                             <img src="https://secure.img1-fg.wfcdn.com/im/88422644/resize-h260-w260%5Ecompr-r85%5Etransparent/1138/113820673/default_name.png" alt="" />
 
                             <h4> Home Office</h4>
 
-                        </div>
+        </div>*/}
 
 
                     </div>

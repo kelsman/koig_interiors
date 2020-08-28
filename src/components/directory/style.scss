@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap');
 
 .directory {
   width: 100%;
@@ -8,7 +8,7 @@
     h3 {
       text-align: center;
       font-weight: 400;
-      font-family: "Tangerine", cursive;
+      font-family: 'Tangerine', cursive;
       font-size: 30px;
       padding: 10px 0;
     }
@@ -36,14 +36,14 @@
         text-align: center;
         font-weight: lighter;
         font-size: 20px;
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       }
 
       &:hover {
         overflow: hidden;
 
         img {
-          transform: scale(1.05);
+          transform: scale(1.07);
           transition: transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95);
         }
       }
@@ -54,17 +54,6 @@
         object-fit: fill;
         object-position: center;
       }
-    }
-  }
-  @keyframes zoomin {
-    from {
-      transition: transform 2s, filter 1.5s ease-in-out;
-      transform-origin: center center;
-      filter: brightness(50%);
-    }
-    to {
-      filter: brightness(100%);
-      transform: scale(1.05);
     }
   }
 }
@@ -175,10 +164,10 @@
 
     .lists {
       display: grid;
-      grid-gap: 5px;
+      grid-gap: 10px;
       grid-template-columns: repeat(3, 1fr);
 
-      padding: 0 50px;
+      padding: 0 60px;
       .furniture,
       .accent-chairs,
       .outdoor,

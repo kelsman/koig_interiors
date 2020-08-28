@@ -1,0 +1,17 @@
+.payment-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+@media screen and (max-width: 450px) {
+  body {
+    width: inherit;
+  }
+  .payment-page {
+    display: 100%;
+    justify-content: unset;
+    align-items: center;
+    height: 100vh;
+  }
+}

@@ -8,23 +8,25 @@ const SlideMenu = ({ ham, closeMenu }) => {
 
 
     return (
-        <div className="slide-menu" style={{
-            transform: ham.transform,
-            transition: ham.transition
-        }}>
+        <div className="slide-menu"
+            style={{
+                transform: ham.transform,
+                transition: ham.transition
+            }}
+        >
             <div>
                 <button className="close-btn" onClick={() => closeMenu()}> X </button>
                 <ul>
                     <li className="slide-item">
-                        <Link to="/"> Home</Link>
+                        <Link to="/" onClick={() => closeMenu()}> Home</Link>
                     </li>
                     <li className="slide-item">
-                        <Link to="/"> shop</Link>
+                        <Link to="/" onClick={() => closeMenu()} > shop</Link>
                     </li>
                     <li className="slide-item">
 
 
-                        <Link to="/"> Contact </Link>
+                        <Link to="/" onClick={() => closeMenu()}> Contact </Link>
 
 
                     </li>
@@ -32,12 +34,12 @@ const SlideMenu = ({ ham, closeMenu }) => {
                     <hr></hr>
                     <li className="slide-item">
 
-                        <Link to="/"> LOGIN</Link>
+                        <Link to="/login" onClick={() => closeMenu()}> LOGIN</Link>
 
                     </li>
                     <li className="slide-item">
 
-                        <Link to="/"> SIGN UP </Link>
+                        <Link to="/signup" onClick={() => closeMenu()}> SIGN UP </Link>
 
                     </li>
 
@@ -46,13 +48,14 @@ const SlideMenu = ({ ham, closeMenu }) => {
 
             </div>
 
-        </div >
+        </div>
 
     )
 }
 
 const mapStateToProps = ({ hamMenu }) => ({
-    ham: hamMenu.styles
+    ham: hamMenu.styles,
+
 });
 const mapDispatchToProps = {
     closeMenu

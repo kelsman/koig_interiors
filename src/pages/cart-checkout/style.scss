@@ -3,4 +3,25 @@
     text-align: right;
     padding: 0 20px;
   }
+  .payment-link {
+    text-align: right;
+    padding: 0 20px;
+    margin: 10px 0;
+    button {
+      border: none;
+      background: orange;
+      color: #111;
+      padding: 10px;
+      transition: all 0.3s ease-out;
+      cursor: pointer;
+      &:hover {
+        color: white;
+        background-color: rgb(19, 18, 18);
+      }
+    }
+  }
+  small {
+    display: block;
+    text-align: center;
+  }
 }

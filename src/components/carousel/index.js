@@ -21,6 +21,7 @@ const CarouselPage = () => {
                 className="container-fluid "
                 activeIndex={index}
                 onSelect={handleSelect}
+
             >
                 <Carousel.Item className="slider">
 
@@ -57,7 +58,7 @@ const CarouselPage = () => {
 
                     <img
                         className="d-block w-100"
-                        src="https://cdn.shopify.com/s/files/1/0192/1043/6708/files/7_1088x576_crop_center.png?v=1587217678"
+                        src="https://secure.img1-fg.wfcdn.com/im/41598865/resize-h622-w828%5Ecompr-r85/1241/124194854/default_name.jpg"
                         alt="Third slide"
 
                     />

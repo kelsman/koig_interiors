@@ -1,0 +1,174 @@
+.payment-form {
+  padding: 30px;
+  min-height: 400px;
+  width: 70%;
+  display: flex;
+  justify-content: space-evenly;
+  box-shadow: 3px 3px 5px 3px #ccc;
+
+  .item-container {
+    height: 400px;
+    width: 50%;
+    //box-shadow: 3px 3px 5px 3px #ccc;
+    max-height: 400px;
+    overflow: scroll;
+    padding: 20px 0px;
+    .item-wrapper {
+      margin: 5px;
+      padding: 0 10px;
+
+      .total {
+        text-align: right;
+
+        p,
+        small {
+          display: block;
+          margin: 0;
+          color: #900d0d;
+        }
+      }
+      .item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 10px 0;
+        img {
+          width: 100px;
+          height: 100px;
+        }
+        small {
+          color: green;
+        }
+      }
+    }
+  }
+  .checkout-form {
+    height: 400px;
+    width: 50%;
+    background-color: #393e46;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    .checkout-field {
+      width: 100%;
+      padding: 10px;
+      input {
+        width: 100%;
+        background: transparent;
+        border: 1px solid #fff;
+        padding: 10px;
+        outline: 0;
+        color: #fff;
+        &:focus {
+          border: 1px solid blue;
+        }
+      }
+    }
+    .paystack-button {
+      background-color: rgb(24, 22, 22);
+      color: #f35588;
+      border: none;
+      display: block;
+      cursor: pointer;
+      width: 70%;
+      margin: 0 auto;
+      border-radius: 5px;
+      height: 30px;
+    }
+  }
+}
+@media screen and (max-width: 450px) {
+  body {
+    width: inherit;
+  }
+  .payment-form {
+    padding: 5px;
+    min-height: 400px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 10px;
+
+    .item-container {
+      height: 400px;
+      width: 50%;
+      //box-shadow: 3px 3px 5px 3px #ccc;
+      max-height: 400px;
+      overflow: scroll;
+      padding: 5px 0px;
+      .item-wrapper {
+        margin: 5px;
+        padding: 0 10px;
+
+        .total {
+          text-align: right;
+
+          p,
+          small {
+            display: block;
+            margin: 0;
+            color: #900d0d;
+          }
+        }
+        .item {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin: 10px 0;
+          img {
+            width: 35px;
+            height: 35px;
+          }
+          p,
+          small {
+            font-size: xx-small;
+          }
+          small {
+            color: green;
+          }
+        }
+      }
+    }
+    .checkout-form {
+      height: 400px;
+      width: 50%;
+      background-color: #393e46;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      .checkout-field {
+        width: 100%;
+        padding: 10px;
+        input {
+          width: 100%;
+          background: transparent;
+          border: 1px solid #fff;
+          padding: 10px;
+          outline: 0;
+          color: #fff;
+          &:focus {
+            border: 1px solid blue;
+          }
+        }
+      }
+      .paystack-button {
+        background-image: linear-gradient(to right, orange, rgb(131, 62, 131));
+        color: #fff;
+        border: none;
+        display: block;
+        cursor: pointer;
+        width: 70%;
+        margin: 0 auto;
+        border-radius: 5px;
+        height: 30px;
+      }
+    }
+  }
+}
+@media screen and (min-height: 1024px) {
+  body {
+    width: inherit;
+  }
+}

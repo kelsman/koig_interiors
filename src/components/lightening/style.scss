@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&family=Tangerine:wght@700&display=swap');
 
-.furniture {
+.lightening {
   width: 100%;
   position: relative;
   transition: all 0.4s ease-out;
@@ -43,7 +43,7 @@
     grid-gap: 10px;
     padding: 20px 20px;
 
-    .furniture-parent {
+    .light-parent {
       overflow: hidden;
       margin: 8px 0;
       position: relative;
@@ -96,12 +96,12 @@
   body {
     width: inherit;
   }
-  .furniture {
+  .lightening {
     .list-wrapper {
       grid-template-columns: repeat(2, minmax(160px, 1fr));
       grid-gap: unset;
       padding: 20px 10px;
-      .furniture-parent {
+      .light-parent {
         width: 140px;
         height: 400px;
         margin: 8px 0;
@@ -127,12 +127,12 @@
   body {
     width: inherit;
   }
-  .furniture {
+  .lightening {
     .list-wrapper {
       grid-template-columns: repeat(2, minmax(160px, 1fr));
       grid-gap: 10px;
       padding: 20px 30px;
-      .furniture-parent {
+      .light-parent {
         width: 140px;
         height: 400px;
         margin: 8px 0;
@@ -158,13 +158,13 @@
   body {
     width: inherit;
   }
-  .furniture {
+  .lightening {
     .list-wrapper {
       grid-template-columns: repeat(2, minmax(160px, 1fr));
       grid-gap: 20px;
 
       padding: 20px 30px;
-      .furniture-parent {
+      .light-parent {
         width: 180px;
         height: 400px;
         margin: 8px 0;
@@ -186,13 +186,13 @@
   body {
     width: inherit;
   }
-  .furniture {
+  .lightening {
     .list-wrapper {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       grid-gap: 10px;
       padding: 20px 40px;
-      .furniture-parent {
+      .light-parent {
         width: 300px;
         height: 400px;
         margin: 8px 0;
