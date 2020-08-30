@@ -10,19 +10,7 @@ const CartCheckoutPage = ({ totalPrice, history, currentUser }) => {
     return (
 
         <div className='checkout-page'>
-
-            {currentUser ?
-
-                <CheckoutItem /> :
-                <small> Log in to see your cart Items</small>
-
-
-
-            }
-
-
-
-            <div className='total'>SUBTOTAL: ${totalPrice} </div>
+            <CheckoutItem />
             <div className="payment-link">
                 <button onClick={() => history.push('/payment')}>
                     Goto checkout

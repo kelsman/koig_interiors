@@ -45,15 +45,17 @@ class SignUp extends Component {
         return (
             <div className="signup-container">
                 <div className="wrapper">
-                    <h2>Sign up</h2>
+
 
                     <form className="signup-form" onSubmit={this.handleSubmit}>
+                        <h2>Sign up</h2>
                         <input
                             type="text"
                             name="username"
                             placeholder="Username"
                             value={this.state.username}
                             onChange={this.handleChange}
+                            required
                         />
                         <input
                             type="email"
@@ -61,6 +63,7 @@ class SignUp extends Component {
                             placeholder="Email"
                             value={this.state.email}
                             onChange={this.handleChange}
+                            required
                         />
                         <input
                             type="password"
@@ -68,6 +71,7 @@ class SignUp extends Component {
                             placeholder="password"
                             value={this.state.password}
                             onChange={this.handleChange}
+                            required
                         />
                         <input
                             type="password"
@@ -75,6 +79,7 @@ class SignUp extends Component {
                             name="confirmPassword"
                             value={this.state.confirmPassword}
                             onChange={this.handleChange}
+                            required
                         />
                         <small style={{
                             color: "red",
@@ -93,13 +98,13 @@ class SignUp extends Component {
                         </p>
                     </form>
 
+                    <div className="hero">
+                        <img src={png} alt="" />
+                    </div>
 
                 </div>
 
 
-                <div className="hero">
-                    <img src={png} alt="" />
-                </div>
             </div>
         );
     }

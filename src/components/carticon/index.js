@@ -4,14 +4,14 @@ import { ReactComponent as ShoppingBag } from '../../assets/shopping-bag.svg';
 import { withRouter } from 'react-router-dom'
 import { connect } from 'react-redux';
 
-const CartIcon = ({ history, itemCount }) => {
+const CartIcon = ({ history, cartQuantity }) => {
     return (
         <div>
             <div className="cart-icon" onClick={() => history.push('/checkout-page')}>
 
                 <ShoppingBag className='shopping-icon' />
 
-                <span className='item-count'> {itemCount} </span>
+                <span className='item-count'> {cartQuantity} </span>
 
             </div>
 
@@ -22,7 +22,7 @@ const CartIcon = ({ history, itemCount }) => {
 }
 
 const mapStateToProps = ({ cart }) => ({
-    itemCount: cart.itemCount
+    cartQuantity: cart.cartItems.reduce((acc, arr) => acc + arr.quantity, 0)
 
 });
 

@@ -44,6 +44,7 @@ export const reduceCartQuantity = (cartItems, cartItemQuantityToDecrease) => {
     if (existingCartItem.quantity <= 1) {
         return cartItems.filter(cartItem => cartItem.id !== cartItemQuantityToDecrease.id);
 
+
     }
 
 
@@ -76,9 +77,3 @@ export const increaseCartQuantity = (cartItems, cartItemQuantityToIncrease) => {
 
 }*/
 
-export const reduceItemCount = (itemCount) => {
-
-    if (itemCount >= 1) {
-        return itemCount - 1
-    }
-}

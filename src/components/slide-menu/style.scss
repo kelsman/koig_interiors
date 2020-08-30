@@ -2,6 +2,7 @@
   top: 0;
   z-index: 50;
   width: 300px;
+  height: 300px;
   background: #fff;
   transition: all 0.4s ease-in-out;
   height: auto;
@@ -16,6 +17,34 @@
     list-style-type: none;
     margin: 0;
     padding: 0;
+    .user-section {
+      margin-top: 0;
+      button {
+        background-image: linear-gradient(to bottom, red, purple);
+        color: #ffff;
+        display: block;
+        width: 100px;
+        font-size: 20px;
+        font-weight: 400;
+        padding: 10px;
+        cursor: pointer;
+        border: none;
+        &:hover {
+          background: black;
+          color: orange;
+        }
+      }
+      a {
+        background-image: linear-gradient(to bottom, red, purple);
+        color: #ffff;
+        display: block;
+        width: 100px;
+        font-size: 20px;
+        font-weight: 400;
+        padding: 10px;
+        cursor: pointer;
+      }
+    }
 
     li {
       display: block;

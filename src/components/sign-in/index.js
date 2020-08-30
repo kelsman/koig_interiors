@@ -52,7 +52,7 @@ class LogIn extends React.Component {
                         />
                         <small>
 
-                            <Link className="password-reset" to='/'> Forget Password?</Link>
+                            <Link className="password-reset" to='/password-reset'> Forget Password?</Link>
                         </small>
                         <button className="signin-btn"> SIGN IN</button>
                         <button

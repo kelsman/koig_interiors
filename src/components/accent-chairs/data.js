@@ -20,9 +20,9 @@ export const accentChairs = [
     },
     {
         id: 4,
-        name: 'Oriel Barrel Chair',
+        name: 'Royal  Barrel Chair',
         price: '$190',
-        imageUrl: 'https://i.ibb.co/yWbL57F/photo-1541533260371-b8fc9b596d84.jpg'
+        imageUrl: 'https://i.ibb.co/jrLDY7Y/koig-interiors-3-CCLagdihtj-M.jpg'
     },
     {
         id: 5,

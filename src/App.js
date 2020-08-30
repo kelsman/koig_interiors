@@ -1,27 +1,44 @@
-import React, { Component } from 'react';
-import Homepage from './pages/homepage';
+import React, { Component, lazy, Suspense } from 'react';
 import Header from './components/header'
 import Footer from './components/footer/index';
 import { Route, Switch, Redirect } from 'react-router-dom';
 //pages
-import LogInPage from './pages/login-page';
-import SignUpPage from './pages/signup-page';
-import CartCheckoutPage from './pages/cart-checkout';
-import FurniturePage from './pages/furniture-page';
-import OutdoorPage from './pages/outdoor-page';
-import RugPage from './pages/rug-page';
-import LighteningPage from './pages/lightening-page';
-import PaymentPage from './pages/payment-page'
+
+
+import Homepage from './pages/homepage';
+
+//import LogInPage from './pages/login-page';
+//import SignUpPage from './pages/signup-page';
+//import CartCheckoutPage from './pages/cart-checkout';
+//import FurniturePage from './pages/furniture-page';
+//import OutdoorPage from './pages/outdoor-page';
+//import RugPage from './pages/rug-page';
+//import LighteningPage from './pages/lightening-page';
+//import PaymentPage from './pages/payment-page'
 //firebase
-import { auth, createUserProfile } from './firebase/utils';
 //redux
+import { auth, createUserProfile } from './firebase/utils';
 import { connect } from 'react-redux';
 import { setCurrentUser } from './Redux/user/userActions';
-import Chairs from './pages/chairs';
+//import Chairs from './pages/chairs';
+//import ForgetPassword from './pages/forget-password';
+//import ContactPage from './pages/contact-page';
+
+//const Homepage = lazy(() => import('./pages/homepage'));
+const LogInPage = lazy(() => import('./pages/login-page'));
+const SignUpPage = lazy(() => import('./pages/signup-page'));
+const CartCheckoutPage = lazy(() => import('./pages/cart-checkout'));
+const FurniturePage = lazy(() => import('./pages/furniture-page'));
+const OutdoorPage = lazy(() => import('./pages/outdoor-page'));
+const RugPage = lazy(() => import('./pages/rug-page'));
+const LighteningPage = lazy(() => import('./pages/lightening-page'));
+const PaymentPage = lazy(() => import('./pages/payment-page'));
+const Chairs = lazy(() => import('./pages/chairs'));
+const ForgetPassword = lazy(() => import('./pages/forget-password'));
+const ContactPage = lazy(() => import('./pages/contact-page'));
+
 
 class App extends Component {
-
-
   authListerner = null;
 
   componentDidMount = () => {
@@ -57,21 +74,23 @@ class App extends Component {
     const { currentUser } = this.props;
     return (
       <div className="App">
-        <div className="content">
-          <div className="content-inside">
-            <Header />
 
-            <Switch>
-              <Route exact path='/' component={Homepage} />
-              <Route exact
-                path='/login'
-                render={() =>
-                  currentUser ? <Redirect to='/' /> : <LogInPage />
-                } />
-              <Route path='/signup' render={() =>
-                currentUser ? <Redirect to='/' /> : <SignUpPage />
+        <Header />
+
+        <div className="main-content">
+
+          <Switch>
+
+            <Route exact path='/' component={Homepage} />
+            <Route exact
+              path='/login'
+              render={() =>
+                currentUser ? <Redirect to='/' /> : <LogInPage />
               } />
-
+            <Route path='/signup' render={() =>
+              currentUser ? <Redirect to='/' /> : <SignUpPage />
+            } />
+            <Suspense fallback={<div> Loading...</div>}>
               <Route exact path="/accent-chairs" render={() => <Chairs />} />
               <Route exact path='/furniture' render={() => <FurniturePage />} />
               <Route exact path="/checkout-page" render={() => < CartCheckoutPage />} />
@@ -79,9 +98,13 @@ class App extends Component {
               <Route exact path='/rugs' component={RugPage} />
               <Route exact path='/lightening' component={LighteningPage} />
               <Route exact path='/payment' component={PaymentPage} />
-            </Switch>
-          </div>
+              <Route exact path="/password-reset" component={ForgetPassword} />
+              <Route exaact path="/contact-us" component={ContactPage} />
+            </Suspense>
+          </Switch>
         </div>
+
+
         <Footer />
       </div>
 

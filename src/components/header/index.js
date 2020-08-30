@@ -38,9 +38,8 @@ class Header extends Component {
                     <nav>
                         <ul>
 
-                            <li className='nav-item'> <Link to='/'>shop</Link></li>
                             <li className='nav-item'> <Link to='/'>About</Link></li>
-                            <li className='nav-item'> <Link to='/'>Contact</Link></li>
+                            <li className='nav-item'> <Link to='/contact-us'>Contact</Link></li>
 
 
                             {currentUser ? (
@@ -51,7 +50,7 @@ class Header extends Component {
                                 </li>
                             ) : (
                                     <li className='nav-item'>
-                                        <Link to='login'>Sign In</Link>
+                                        <Link to='/login'>Sign In</Link>
                                     </li>
                                 )}
                             <li>   <CartIcon /></li>
@@ -72,6 +71,7 @@ class Header extends Component {
 const mapStateToProps = ({ user }) => ({
 
     currentUser: user.currentUser
+
 })
 
 export default connect(mapStateToProps, null)(Header);

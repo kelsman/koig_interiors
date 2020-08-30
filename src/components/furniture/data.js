@@ -4,13 +4,13 @@ export const furniture = [
         id: 1,
         name: 'Celestial Microfibre/Microsuede',
         price: '$250',
-        imageUrl: 'https://secure.img1-fg.wfcdn.com/im/54216038/resize-h310-w310%5Ecompr-r85/6008/60088906/Nia+Velvet+81.5%2522+Square+Arm+Sleeper.jpg'
+        imageUrl: 'https://i.ibb.co/QFYRZ2R/koig-global-2-CESLDPAni-Oc.jpg'
     },
     {
         id: 2,
         name: 'palmer Velvet 72 by Wrough Studio',
         price: '$120',
-        imageUrl: 'https://secure.img1-fg.wfcdn.com/im/11434890/resize-h310-w310%5Ecompr-r85/8587/85874584/Palmer+Velvet+72%2522+W+Square+Arm+Sofa.jpg'
+        imageUrl: 'https://i.ibb.co/8MGPrf7/koig-global-1-CESLDPAni-Oc.jpg'
     },
     {
         id: 3,

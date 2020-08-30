@@ -57,6 +57,27 @@ export const createUserProfile = (userAuth, additionData) => {
     return userRef;
 
 }
+export const createContactProfile = async (state) => {
+
+    const complainRef = firestore.collection('complaints');
+    const snapShot = complainRef.get();
+    console.log(snapShot);
+    try {
+        const { name, phone, details, email, subject } = state;
+        const createdAt = new Date();
+        complainRef.add({
+            name,
+            phone,
+            email,
+            subject,
+            details,
+            createdAt
+        })
+    } catch (error) {
+        console.log(error)
+    }
+};
+
 
 
 export default firebase;
