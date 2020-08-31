@@ -16,13 +16,13 @@ export const furniture = [
         id: 3,
         name: 'Twin 66.1" Tuffed Back Convertible Sofa by serta futons',
         price: '$100',
-        imageUrl: 'https://secure.img1-fg.wfcdn.com/im/57436246/resize-h310-w310%5Ecompr-r85/7194/71941621/Twin+66.1%2522+Tufted+Back+Convertible+Sofa.jpg'
+        imageUrl: 'https://i.ibb.co/74SHV1R/koig-interiors-4-CCLam-VBhrd-W.jpg'
     },
     {
         id: 4,
         name: 'ibiza Microfibre 80.3" Flared Arm sofa by Zipcode Design',
         price: '$299.99',
-        imageUrl: 'https://secure.img1-fg.wfcdn.com/im/67858957/resize-h310-w310%5Ecompr-r85/7881/78812972/Ibiza+Microfiber+80.3%2522+Flared+Arm+Sofa.jpg'
+        imageUrl: 'https://i.ibb.co/RHMyy1n/koig-interiors-1-CCLagdihtj-M.jpg'
     },
     {
         id: 5,

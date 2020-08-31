@@ -57,7 +57,7 @@ export const accentChairs = [
     {
         id: 10,
         name: 'Lilo Barrel Chair',
-        price: '170',
+        price: '$170',
         imageUrl: 'https://i.ibb.co/ZcHgBnq/photo-1589584649628-b597067e07a3.jpg'
     },
     {

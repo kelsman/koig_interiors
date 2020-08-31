@@ -5,12 +5,17 @@ import CheckoutItem from '../../components/checkout-item';
 import { withRouter } from 'react-router-dom'
 
 
-const CartCheckoutPage = ({ totalPrice, history, currentUser }) => {
+const CartCheckoutPage = ({ totalPrice, history }) => {
 
     return (
 
         <div className='checkout-page'>
+
+
             <CheckoutItem />
+
+
+            <div className='total'>SUBTOTAL: ${totalPrice} </div>
             <div className="payment-link">
                 <button onClick={() => history.push('/payment')}>
                     Goto checkout

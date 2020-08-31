@@ -37,7 +37,7 @@ class SlideMenu extends Component {
                         <li className="slide-item">
 
 
-                            <Link to="/" onClick={() => closeMenu()}> Contact us </Link>
+                            <Link to="/contact-us" onClick={() => closeMenu()}> Contact us </Link>
 
 
                         </li>
