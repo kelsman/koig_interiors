@@ -3,6 +3,9 @@ An E-commerce web application built with React,redux , firebase and Paystack for
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+### Demo
+[Demo](https://kens-interior.netlify.app/)
+
 ## Available Scripts
 
 In the project directory, you can run:
